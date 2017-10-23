@@ -1,0 +1,52 @@
+<html>
+
+<head>
+performance quiz #3 <br/>
+
+<script language="javascript">
+    
+    //need to put my images and descriptions in arrays
+    
+    var myImages = new Array ("tacobell.jpg", "cfa.jpg", "chilis.jpg", "dd.jpg", "dominos.jpg", "jj.jpg", "kfc.jpg", "mickeyd.jpg", "pb.jpg", "sb.jpg");
+    
+    var myDescription = new Array ("Taco Bell", "Chickfila", "Chilis", "Dunkin Donuts", "Dominos", "Jamba Juice", "Kentucky Fried Chicken", "Mcdonalds", "Panera Bread", "Starbucks")
+    
+    //function that loads immediately and asks for user name
+    
+    function myOnLoadFunction()
+    {
+    prompt("What is your name?");
+    }
+    
+    //function that puts what the user enters into the status bar
+
+    function writetostatus()
+    {
+        window.status = myOnLoadFunction
+        return true
+    }
+
+    </script> 
+    
+</head>
+
+    <!--within body tag add the onload function and write to status as well as the display the images-->  
+    
+ <body language=Javascript onload="myOnLoadFunction()" "writetostatus">
+     
+    <img name=img0 src="tacobell.jpg" border=0 ID="img0" width="100" height="100" onMouseover = "alert(myDescription[0])">
+    <img name=img1 src="cfa.jpg" border=0 ID="img1" width="100" height="100" onMouseover = alert(myDescription[1])>
+    <img name=img2 src="chilis.jpg" border=0 ID="img2" width="100" height="100" onMouseover = alert(myDescription[2])>
+    <img name=img3 src="dd.jpg" border=0 ID="img3" width="100" height="100" onMouseover = alert(myDescription[3])>
+    <img name=img4 src="dominos.jpg" border=0 ID="img4" width="100" height="100" onMouseover = alert(myDescription[4])><br/>
+    <img name=img5 src="jj.jpg" border=0 ID="img5" width="100" height="100" onMouseover = alert(myDescription[5])>
+    <img name=img6 src="kfc.jpg" border=0 ID="img6" width="100" height="100" onMouseover = alert(myDescription[6])>
+    <img name=img7 src="mickeyd.jpg" border=0 ID="img7" width="100" height="100" onMouseover = alert(myDescription[7])>
+    <img name=img8 src="pb.jpg" border=0 ID="img8" width="100" height="100" onMouseover = alert(myDescription[8])>
+    <img name=img9 src="sb.jpg" border=0 ID="img9" width="100" height="100" onMouseover = alert(myDescription[9])>
+
+
+
+</body>
+
+</html>

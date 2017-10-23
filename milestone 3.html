@@ -1,0 +1,93 @@
+<html>
+    
+<head>
+<title>MileStone #3</title>    
+</head>
+    
+<body>
+    </body>
+    
+<form action="">
+    
+Question 1 - Which continent is the biggest?<br>
+  <input type="radio" id="cont0" name="cont" value="Asia"/>Asia<br>
+  <input type="radio" id="cont1" name="cont" value="Europe"/>Europe<br>
+  <input type="radio" id="cont2" name="cont" value="Australia"/>Australia<br>
+  <input type="radio" id="cont3" name="cont" value="Africa"/>Africa<br>
+<hr>
+    Question 2 - What is the captiol of France?<br>
+  <input type="radio" id="city0" name="city" value="Liverpool"/>Liverpool<br>
+  <input type="radio" id="city1" name="city" value="Manchester"/>Manchester<br>
+  <input type="radio" id="city2" name="city" value="London"/>London<br>
+  <input type="radio" id="city3" name="city" value="Oxford"/>Oxford<br>
+<hr>
+    Question 3 - What is the longest river in the world?<br>
+  <input type="radio" id="river0" name="river" value="Nile River"/>Nile River<br>
+  <input type="radio" id="river1" name="river" value="Amazon River"/>Amazon River<br>
+  <input type="radio" id="river2" name="river" value="Congo River"/>Congo River<br>
+  <input type="radio" id="river3" name="river" value="Yellow River"/>Yellow River<br>
+ 
+   <input type="Submit" value="Check" onclick="myAnswer();"/>
+    
+</form>
+    
+   <script language="javascript">
+       
+//call a function when check is clicked on
+       
+function myAnswer(){
+    
+//defining variables to check the answers using loops. 
+    var totalQuestions = 3;
+    var correctAnswers = 0;
+    var i;
+
+    //loop through each question to find the right answer; then if correct add it to the number of correct answers variable
+
+    
+    var a1 = document.getElementsByName('cont'); 
+    for (i = 0; i < a1.length; i++)
+    {   
+        if (a1[i].checked)
+            {if(a1[i].value == 'Asia')
+                {correctAnswers++;
+                 break;}
+            }
+    }
+    var a2 = document.getElementsByName('city'); 
+    for (i = 0; i < a2.length; i++)
+    {   
+        if (a2[i].checked)
+            {if(a2[i].value == 'London')
+                {correctAnswers++;
+                 break;}
+            }
+    }  
+    var a3 = document.getElementsByName('river'); 
+    for (i = 0; i < a3.length; i++)
+    {   
+        if (a3[i].checked)
+            {if(a3[i].value == 'Nile River')
+                {correctAnswers++;
+                 break;}
+            }
+    }
+    
+    // Displaying results - If the number of correct answers matches the number of total questions then the score is 100 percent. If not show how many they got right.
+    
+    var alertText;
+    
+   if(correctAnswers == totalQuestions) {
+      alertText = "Well Done! You got all the questions right!";
+   }
+   else {
+      alertText = "You got " + correctAnswers + " out of " + totalQuestions + " correct!";
+   }
+   alert(alertText);
+}
+
+    
+    </script>
+
+    
+</html>
