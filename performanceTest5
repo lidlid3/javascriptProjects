@@ -1,0 +1,41 @@
+<html>
+
+
+<head>
+
+<script language="javascript">
+
+var myList = document.getElementById("myList");
+
+function radiobtns()
+
+	{
+	window.parent.radioFrame.form2.myRadio[1].checked=true;
+	}
+
+</script>
+
+</head>
+
+<body>
+
+<p>Make a Selection </p>
+
+<form name="form1">
+
+<select id="myList" onchange="radiobtns()">
+    <option value = "0"> Radio 1 </option>
+    <option value = "1"> Radio 2 </option>
+    <option value = "2"> Radio 3 </option>
+    <option value = "3"> Radio 4 </option>
+    <option value = "4"> Radio 5 </option>
+    </select>
+
+
+</form>
+
+
+
+</body>
+
+</html>

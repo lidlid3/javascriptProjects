@@ -1,13 +1,21 @@
 <html>
-<head> <h1>Geography Questions<br/>
-    </h1> </head>
+<head>
+   <h1><center>Geography Quiz</center></h1>
+    <h2>Welcome to my Trivia Quiz. If you would like to add a one minute timer to the quiz, click on the "Timer" button, then immediately on "Start Quiz" as your timer starts right away.
+    <br>
+    If you wish to take the quiz without the timer, then just click "Start Quiz"</h2>
+    <br>
+    <button onclick = "setTimeout(myAnswer, 60000)">Timer</button>
+    <br>
+    <br>
+    <input type="button" id="sq" name="startQuiz" value="Start Quiz" onClick="showQuestions(1)"/>
+    <br>
+    <br>
+    </head>
+    <body>
 
-<body>
-    </body>
-    
-<!--add all the inputs of the radio button and questions. using the input type radio. Also add a a submit button  with onClick method. -->
-    
-<form action="">
+        
+<form id= "form1" style="display: none;">
    
     Question 1 - Which of these continents is the biggest?<br>
     <input type="radio" id="cont0" name="cont" value="Asia"/>Asia<br>
@@ -43,6 +51,14 @@
 </form>
     
    <script language="javascript">
+       
+       function showQuestions(a){
+           if(a==1)
+            document.getElementById("form1").style.display="block";
+
+       }
+       
+       
 
 //call a function when check is clicked on
        
@@ -111,6 +127,6 @@
        
     
     </script>
-
-
+    
+    </body>
 </html>
