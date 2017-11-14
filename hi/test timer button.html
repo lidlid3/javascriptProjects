@@ -1,10 +1,14 @@
 <html>
 <head>
+    <!-- add a heading with instructions to the quiz-->
    <h1><center>Geography Quiz</center></h1>
     <h2>Welcome to my Trivia Quiz. If you would like to add a one minute timer to the quiz, click on the "Timer" button, then immediately on "Start Quiz" as your timer starts right away.
     <br>
     If you wish to take the quiz without the timer, then just click "Start Quiz"</h2>
     <br>
+    
+    <!-- add a button with setTimeou function that closes and grades the quiz after a minute-->
+    
     <button onclick = "setTimeout(myAnswer, 60000)">Timer</button>
     <br>
     <br>
@@ -13,7 +17,7 @@
     <br>
     </head>
     <body>
-
+<!-- adding a from that holds all the questions with mutiple choice answers-->
         
 <form id= "form1" style="display: none;">
    
@@ -51,6 +55,8 @@
 </form>
     
    <script language="javascript">
+    
+    // calling a funciton that when the start quiz button is clicked, the questions with answers will show up!
        
        function showQuestions(a){
            if(a==1)
