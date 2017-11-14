@@ -1,0 +1,87 @@
+<html>
+
+<head>
+Airline Seats <br><br>
+
+<script language="javascript">
+    
+    //need to put my images and descriptions in arrays
+    
+    var myImages = new Array ("white.png","white.png","white.png","white.png","white.png","white.png","blue.png","white.png","blue.png","red.png","blue.png","red.png","blue.png","blue.png","white.png","white.png","white.png","white.png","white.png","blue.png","blue.png","white.png","white.png","white.png",);
+    
+    var myDescription = new Array ("Price:$250, First Class, Bulk Head Available", "Price:$250, First Class, Bulk Head Available", "Price:$260, First Class, Bulk Head Available", "Price:$260, First Class, Bulk Head Available", "Price:$250, First Class, Bulk Head Available", "Price:$248, First Class, Bulk Head Available", "Price:$155, Business Class, Bulk Head Available", "Price:$155, Business Class, Bulk Head Available", "Price:$170, Business Class, Bulk Head Available", "Price:$160, Premium Economy, Bulk Head Available", "Price:$165, Premium Economy, Bulk Head Available", "Price:$174, Premium Economy, Bulk Head Available", "Price:$153, Premium Economy, Bulk Head Available", "Price:$171, Premium Economy, Bulk Head Available", "Price:$163, Premium Economy, Bulk Head Available", "Price:$153, Premium Economy, Bulk Head Available", "Price:$134, Premium Economy, Bulk Head Available", "Price:$127, Premium Economy, Bulk Head Available", "Price:$110, Economy Class, Bulk Head Available", "Price:$105, Economy Class, Bulk Head Available", "Price:$95, Economy Class, Bulk Head Available", "Price:$83, Economy Class, Bulk Head Available", "Price:$72, Economy Class, Bulk Head Available", "Price:$68, Economy Class, Bulk Head Available", )
+    
+    //function that loads immediately and asks for user name
+    
+    
+    //function that puts what the user enters into the status bar
+
+    function writetostatus()
+    {
+        window.status = myOnLoadFunction
+        return true
+    }
+
+    </script> 
+    
+</head>
+
+    <!--within body tag add the onload function and write to status as well as the display the images-->  
+    
+    
+    
+ <body language=Javascript onload="writetostatus">
+    <style>
+     table, th, td
+        {border: 1px solid black;}
+     </style>
+     <table> 
+         <tr>
+    <th><img name=img0 src="white.png" border=0 ID="img0" width="50" height="50" onMouseover = "alert(myDescription[0])"></th>
+    <th><img name=img1 src="white.png" border=0 ID="img1" width="50" height="50" onMouseover = alert(myDescription[1])></th>
+    <th><img name=img2 src="white.png" border=0 ID="img2" width="50" height="50" onMouseover = alert(myDescription[2])></th>
+         </tr>
+         <tr>
+    <th><img name=img3 src="white.png" border=0 ID="img3" width="50" height="50" onMouseover = "alert(myDescription[3])"></th>
+    <th><img name=img4 src="white.png" border=0 ID="img4" width="50" height="50" onMouseover = alert(myDescription[4])></th>
+    <th><img name=img5 src="white.png" border=0 ID="img5" width="50" height="50" onMouseover = alert(myDescription[5])></th>
+         </tr>      
+         <tr>
+    <th><img name=img6 src="blue.png" border=0 ID="img6" width="50" height="50" onMouseover = "alert(myDescription[6])"></th>
+    <th><img name=img7 src="white.png" border=0 ID="img7" width="50" height="50" onMouseover = alert(myDescription[7])></th>
+    <th><img name=img8 src="blue.png" border=0 ID="img8" width="50" height="50" onMouseover = alert(myDescription[8])></th>
+         </tr>     
+         <tr>
+    <th><img name=img9 src="red.png" border=0 ID="img9" width="50" height="50" onMouseover = "alert(myDescription[9])"></th>
+    <th><img name=img10 src="blue.png" border=0 ID="img10" width="50" height="50" onMouseover = alert(myDescription[10])></th>
+    <th><img name=img11 src="red.png" border=0 ID="img11" width="50" height="50" onMouseover = alert(myDescription[11])></th>
+         </tr>   
+         <tr>
+    <th><img name=img12 src="blue.png" border=0 ID="img12" width="50" height="50" onMouseover = "alert(myDescription[12])"></th>
+    <th><img name=img13 src="blue.png" border=0 ID="img13" width="50" height="50" onMouseover = alert(myDescription[13])></th>
+    <th><img name=img14 src="white.png" border=0 ID="img14" width="50" height="50" onMouseover = alert(myDescription[14])></th>
+        </tr>
+        <tr>
+    <th><img name=img15 src="white.png" border=0 ID="img15" width="50" height="50" onMouseover = "alert(myDescription[15])"></th>
+    <th><img name=img16 src="white.png" border=0 ID="img16" width="50" height="50" onMouseover = alert(myDescription[16])></th>
+    <th><img name=img17 src="white.png" border=0 ID="img17" width="50" height="50" onMouseover = alert(myDescription[17])></th>
+         </tr>
+        <tr>
+    <th><img name=img18 src="white.png" border=0 ID="img18" width="50" height="50" onMouseover = "alert(myDescription[18])"></th>
+    <th><img name=img19 src="blue.png" border=0 ID="img19" width="50" height="50" onMouseover = alert(myDescription[19])></th>
+    <th><img name=img20 src="blue.png" border=0 ID="img20" width="50" height="50" onMouseover = alert(myDescription[20])></th>
+         </tr>
+         <tr>
+    <th><img name=img21 src="white.png" border=0 ID="img21" width="50" height="50" onMouseover = "alert(myDescription[21])"></th>
+    <th><img name=img22 src="white.png" border=0 ID="img22" width="50" height="50" onMouseover = alert(myDescription[22])></th>
+    <th><img name=img23 src="white.png" border=0 ID="img23" width="50" height="50" onMouseover = alert(myDescription[23])></th>
+         </tr>
+     </table>
+     <br>
+<image src = "white.png" border=1 width="10" height="10"> Available</image><br>
+<image src = "blue.png" border=1 width="10" height="10"> Not Available</image><br>
+<image src = "red.png" border=1 width="10" height="10"> Exit Seats</image><br>
+
+</body>
+
+</html>
