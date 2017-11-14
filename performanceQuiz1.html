@@ -1,0 +1,49 @@
+<html>
+
+<head>
+performance quiz #1 <br/>
+</head>
+
+<body>
+
+<script language="javascript">
+
+var myArray = new Array();
+
+  myArray1 = new Array("Enter a movie title",
+            "When did it release?",
+            "What is the run time?",
+            "what is the rating and why?",
+            "What is the Cast?",
+            "Who is the director?",
+            "What genre is it?",
+            "What is the synopsis?"); 
+    
+var quit = false;
+var counter = 0;
+var num = 7;
+    
+while (quit == false){
+    myArray[counter] = new Array();
+    for (j=0; j<=num; j++){
+        myArray[counter][j] = prompt(myArray1[j]);
+        
+        if(myArray[counter][j]=="quit"){
+            quit = true;
+            num=0;
+        }
+            
+    }
+    counter++;
+}
+    
+     for (d=0; d < myArray.length; d++){
+         document.write(myArray[d] + "<br>");
+         document.write("<hr>");
+    }
+    
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+<HTML>
+<BODY>
+<H2>Band Manager</H2>
+    
+<SCRIPT LANGUAGE=JavaScript>
+
+//constructor
+
+function customerBand (Venue, Address, City, State, Zip, Date, Time, Price, phoneNumber, Website, addBands)
+    {
+        this.Venue = Venue;
+        this.Address = Address;
+        this.City = City;
+        this.State = State;
+        this.Zip = Zip;
+        this.Date = Date;
+        this.Time = Time;
+        this.Price = Price;
+        this.phoneNumber = phoneNumber;
+        this.Website = Website;
+        this.addBands = addBands;
+    }
+
+//method definitions
+    
+customerBand.prototype.setVenue = function(Venue)
+{
+	this.Venue = Venue;
+}
+customerBand.prototype.getVenue = function()
+{
+	return this.Venue;
+}
+customerBand.prototype.setAddress = function(Address)
+{
+	this.showAddress = Address;
+}
+customerBand.prototype.getAddress = function()
+{
+	return this.Address;
+}
+customerBand.prototype.setCity = function(City)
+{
+	this.City = City;
+}
+customerBand.prototype.getCity = function()
+{
+	return this.City;
+}
+customerBand.prototype.setState = function(State)
+{
+	this.State = State;
+}
+customerBand.prototype.getState= function()
+{
+	return this.State;
+}
+customerBand.prototype.setZip = function(Zip)
+{
+	this.Zip = Zip;
+}
+customerBand.prototype.getZip = function()
+{
+	return this.Zip;
+}
+customerBand.prototype.setDate = function(Date)
+{
+	this.Date = Date;
+}
+customerBand.prototype.getDate = function()
+{
+	return this.Date;
+}
+customerBand.prototype.setTime = function(Time)
+{
+	this.Time = Time;
+}
+customerBand.prototype.getTime = function()
+{
+	return this.Time;
+}
+customerBand.prototype.setPrice = function(Price)
+{
+	this.Price = Price;
+}
+customerBand.prototype.getPrice = function()
+{
+	return this.Price;
+}
+customerBand.prototype.setphoneNumber = function(phoneNumber)
+{
+	this.phoneNumber = phoneNumber;
+}
+customerBand.prototype.getphoneNumber = function()
+{
+	return this.phoneNumber;
+}
+customerBand.prototype.setWebsite = function(Website)
+{
+	this.Website = Website;
+}
+customerBand.prototype.getWebsite = function()
+{
+	return this.Website;
+}
+customerBand.prototype.setaddBands = function(addBands)
+{
+	this.addBands = addBands;
+}
+customerBand.prototype.getaddBands = function()
+{
+	return this.addBands;
+}
+
+//Create the array
+//create the class to account for arrays
+
+function band()
+{
+this.bookings = new Array()
+}
+
+//add information
+
+band.prototype.addBooking = function(Venue, Address, City, State, Zip, Date, Time, Price, phoneNumber, Website, addBands) 
+{
+   this.bookings[Venue] = new customerBand(Venue, Address, City, State, Zip, Date, Time, Price, phoneNumber, Website, addBands);
+}
+
+//making an object that will display results in a table
+
+band.prototype.getBookingsTable = function()
+{
+var booking; 
+var bookingsTableHTML = "<table border = 4>";
+    
+    for (i in this.bookings) //for in loop //brackets mean subscipt
+        {
+        bookingsTableHTML += "<tr><td>";
+        bookingsTableHTML += this.bookings[i].getVenue();
+        bookingsTableHTML += "</td>";
+
+        bookingsTableHTML += "<td>";
+        bookingsTableHTML += this.bookings[i].getAddress();
+        bookingsTableHTML += "</td>";
+
+        bookingsTableHTML += "<td>";
+        bookingsTableHTML += this.bookings[i].getCity();
+        bookingsTableHTML += "</td>";
+
+        bookingsTableHTML += "<td>";
+        bookingsTableHTML += this.bookings[i].getState();
+        bookingsTableHTML += "</td>";
+
+        bookingsTableHTML += "<td>";
+        bookingsTableHTML += this.bookings[i].getZip();
+        bookingsTableHTML += "</td>";
+
+        bookingsTableHTML += "<td>";
+        bookingsTableHTML += this.bookings[i].getDate();
+        bookingsTableHTML += "</td>";
+
+        bookingsTableHTML += "<td>";
+        bookingsTableHTML += this.bookings[i].getTime();
+        bookingsTableHTML += "</td>";
+
+        bookingsTableHTML += "<td>";
+        bookingsTableHTML += this.bookings[i].getPrice();
+        bookingsTableHTML += "</td>";
+
+        bookingsTableHTML += "<td>";
+        bookingsTableHTML += this.bookings[i].getphoneNumber();
+        bookingsTableHTML += "</td>";
+
+        bookingsTableHTML += "<td>";
+        bookingsTableHTML += this.bookings[i].getWebsite();
+        bookingsTableHTML += "</td>";
+
+        bookingsTableHTML += "<td>";
+        bookingsTableHTML += this.bookings[i].getaddBands();
+        bookingsTableHTML += "</td>";
+        bookingsTableHTML += "</tr>";
+        }
+        bookingsTableHTML += "</table>";
+        return bookingsTableHTML;
+}
+
+//right now this is what i input - need to figure out how to loop it so it asks the user for the info
+//then see how to display it
+//for loop
+//gather info
+//once full show is gathered
+//call your method
+//invisible ID pointer - venue - etc
+//display using londeOdeon
+    
+var londeOdeon = new band();
+var counter = 0;
+var quit = false;
+var num = 11;
+var array = new Array();
+var question = new Array (
+                "Venue",
+                "Address",
+                "City",
+                "State",
+                "Zip",
+                "Date",
+                "Time",
+                "Price",
+                "Phone Number",
+                "Website",
+                "Bands also playing",
+                "Type 'quit' if done adding event"
+                );
+    
+while (quit == false)
+{
+    array[counter] = new Array();
+    
+    for (j=0; j<=num; j++)
+    {
+        array[counter][j] = prompt(question[j]);
+        
+        if(array[counter][j]=="quit")
+        {
+            quit = true;
+            num=0;
+        }     
+    }
+   
+    londeOdeon.addBooking("<b>Venue</b>", "<b>Address</b>", "<b>City</b>", "<b>State</b>", "<b>Zip</b>", "<b>Date</b>", "<b>Time</b>", "<b>Price</b>", "<b>Phone Number</b>", "<b>Website</b>", "<b>Bands also playing</b>");
+    
+    londeOdeon.addBooking(array[counter][0],array[counter][1], array[counter][2], array[counter][3], array[counter][4], array[counter][5], array[counter][6], array[counter][7], array[counter][8], array[counter][9], array[counter][10], array[counter][11]);
+    
+    counter++;
+}
+
+document.write(londeOdeon.getBookingsTable());
+    
+    
+
+</SCRIPT>
+
+</BODY>
+</HTML>

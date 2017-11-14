@@ -1,0 +1,28 @@
+<HTML>
+    
+    <!-- connecting the left frame to the right frame.-->
+    
+    <head><title>Geography Quiz</title>
+    
+    <!-- adding a function to that when the button in left frame is clicked, the right frame file will load on the right frame and show the quiz--> 
+    <!-- i dont have the visibilty of the button figured out just yet--> 
+          <script language="javascript">
+        
+          function showFrame(){
+            rightFrame.window.location.href = "rightFrame.htm";
+          }
+    </script>
+
+    </head>
+    
+    <!-- adding the frames to the frameset with its sizes. holds the initial fake file to hold the space and then also the the leftframe file with the start quiz button--> 
+    
+<FRAMESET COLS = "25%, *">
+   <FRAME NAME = "leftFrame" SRC="leftFrame.htm"/>
+    <frameset cols = "75%, *">
+   <FRAME NAME = "rightFrame" SRC="fake1.html"/>
+</FRAMESET></framset>
+
+<NOFRAME></NOFRAME>
+
+</HTML>
