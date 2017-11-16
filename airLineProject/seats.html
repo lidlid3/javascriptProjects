@@ -1,83 +1,128 @@
 <html>
 
 <head>
-Airline Seats <br><br>
+<h1>Airline Seats</h1> <br>
 
 <script language="javascript">
     
-    //need to put my images and descriptions in arrays
+    //need to put my descriptions in arrays of the airplane information like seat location, class, price, emergency, and bulk
     
-    var myImages = new Array ("white.png","white.png","white.png","white.png","white.png","white.png","blue.png","white.png","blue.png","red.png","blue.png","red.png","blue.png","blue.png","white.png","white.png","white.png","white.png","white.png","blue.png","blue.png","white.png","white.png","white.png",);
+    var myDescription = new Array (
+        "Price:$250, First Class, Bulk Head",
+        "Price:$250, First Class, Bulk Head", 
+        "Price:$260, First Class, Bulk Head",
+        "Price:$260, First Class",
+        "Price:$250, First Class",
+        "Price:$248, First Class", 
+        "Price:$155, Business Class, Bulk Head",
+        "Price:$155, Business Class, Bulk Head",
+        "Price:$170, Business Class, Bulk Head",
+        "Price:$160, Business Class. Emergency Exit",
+        "Price:$165, Business Class",
+        "Price:$174, Business Class. Emergency Exit",
+        "Price:$153, Business Class",
+        "Price:$171, Business Class",
+        "Price:$163, Business Class",
+        "Price:$153, Business Class",
+        "Price:$134, Business Class",
+        "Price:$127, Business Class",
+        "Price:$110, Economy Class, Bulk Head",
+        "Price:$105, Economy Class, Bulk Head",
+        "Price:$95, Economy Class, Bulk Head", 
+        "Price:$88, Economy Class", 
+        "Price:$72, Economy Class",
+        "Price:$69, Economy Class",
+        "Price:$110, Economy Class",
+        "Price:$107, Economy Class",
+        "Price:$95, Economy Class", 
+        "Price:$93, Economy Class, Emergency Exit", 
+        "Price:$74, Economy Class",
+        "Price:$68, Economy Class, Emergency Exit",
+        "Price:$81, Economy Class", 
+        "Price:$78, Economy Class",
+        "Price:$58, Economy Class",);
     
-    var myDescription = new Array ("Price:$250, First Class, Bulk Head Available", "Price:$250, First Class, Bulk Head Available", "Price:$260, First Class, Bulk Head Available", "Price:$260, First Class, Bulk Head Available", "Price:$250, First Class, Bulk Head Available", "Price:$248, First Class, Bulk Head Available", "Price:$155, Business Class, Bulk Head Available", "Price:$155, Business Class, Bulk Head Available", "Price:$170, Business Class, Bulk Head Available", "Price:$160, Premium Economy, Bulk Head Available", "Price:$165, Premium Economy, Bulk Head Available", "Price:$174, Premium Economy, Bulk Head Available", "Price:$153, Premium Economy, Bulk Head Available", "Price:$171, Premium Economy, Bulk Head Available", "Price:$163, Premium Economy, Bulk Head Available", "Price:$153, Premium Economy, Bulk Head Available", "Price:$134, Premium Economy, Bulk Head Available", "Price:$127, Premium Economy, Bulk Head Available", "Price:$110, Economy Class, Bulk Head Available", "Price:$105, Economy Class, Bulk Head Available", "Price:$95, Economy Class, Bulk Head Available", "Price:$83, Economy Class, Bulk Head Available", "Price:$72, Economy Class, Bulk Head Available", "Price:$68, Economy Class, Bulk Head Available", )
     
-    //function that loads immediately and asks for user name
+    //add a function that will take you to open the next frame where the user can input their information
     
-    
-    //function that puts what the user enters into the status bar
-
-    function writetostatus()
-    {
-        window.status = myOnLoadFunction
-        return true
-    }
 
     </script> 
     
 </head>
 
-    <!--within body tag add the onload function and write to status as well as the display the images-->  
+    <!--include all the images of the airpane seats On a table that holds all of them with a onMouseOver function that shows the descriptions from the descriptions array.-->  
+    
+    <!-- add an onClick Function that will take you to a new frame where the user can buy a ticket and put in their information-->
     
     
     
- <body language=Javascript onload="writetostatus">
+ <body>
+     
     <style>
      table, th, td
         {border: 1px solid black;}
      </style>
      <table> 
-         <tr>
-    <th><img name=img0 src="white.png" border=0 ID="img0" width="50" height="50" onMouseover = "alert(myDescription[0])"></th>
-    <th><img name=img1 src="white.png" border=0 ID="img1" width="50" height="50" onMouseover = alert(myDescription[1])></th>
-    <th><img name=img2 src="white.png" border=0 ID="img2" width="50" height="50" onMouseover = alert(myDescription[2])></th>
+         <tr>FIRST CLASS
+    <th><img name=img0 src="white.png" border=0 ID="img0" width="25" height="25" onMouseover = "alert(myDescription[0])"></th>
+    <th><img name=img1 src="white.png" border=0 ID="img1" width="25" height="25" onMouseover = alert(myDescription[1])></th>
+    <th><img name=img2 src="white.png" border=0 ID="img2" width="25" height="25" onMouseover = alert(myDescription[2])></th>
          </tr>
          <tr>
-    <th><img name=img3 src="white.png" border=0 ID="img3" width="50" height="50" onMouseover = "alert(myDescription[3])"></th>
-    <th><img name=img4 src="white.png" border=0 ID="img4" width="50" height="50" onMouseover = alert(myDescription[4])></th>
-    <th><img name=img5 src="white.png" border=0 ID="img5" width="50" height="50" onMouseover = alert(myDescription[5])></th>
-         </tr>      
-         <tr>
-    <th><img name=img6 src="blue.png" border=0 ID="img6" width="50" height="50" onMouseover = "alert(myDescription[6])"></th>
-    <th><img name=img7 src="white.png" border=0 ID="img7" width="50" height="50" onMouseover = alert(myDescription[7])></th>
-    <th><img name=img8 src="blue.png" border=0 ID="img8" width="50" height="50" onMouseover = alert(myDescription[8])></th>
-         </tr>     
-         <tr>
-    <th><img name=img9 src="red.png" border=0 ID="img9" width="50" height="50" onMouseover = "alert(myDescription[9])"></th>
-    <th><img name=img10 src="blue.png" border=0 ID="img10" width="50" height="50" onMouseover = alert(myDescription[10])></th>
-    <th><img name=img11 src="red.png" border=0 ID="img11" width="50" height="50" onMouseover = alert(myDescription[11])></th>
+    <th><img name=img3 src="white.png" border=0 ID="img3" width="25" height="25" onMouseover = "alert(myDescription[3])"></th>
+    <th><img name=img4 src="blue.png" border=0 ID="img4" width="25" height="25" onMouseover = alert(myDescription[4])></th>
+    <th><img name=img5 src="white.png" border=0 ID="img5" width="25" height="25" onMouseover = alert(myDescription[5])></th>
+         </tr>      </table>
+        <table> <tr>   BUSINESS CLASS
+    <th><img name=img6 src="blue.png" border=0 ID="img6" width="25" height="25" onMouseover = "alert(myDescription[6])"></th>
+    <th><img name=img7 src="white.png" border=0 ID="img7" width="25" height="25" onMouseover = alert(myDescription[7])></th>
+    <th><img name=img8 src="blue.png" border=0 ID="img8" width="25" height="25" onMouseover = alert(myDescription[8])></th>
+         </tr> 
+                <tr> 
+    <th><img name=img9 src="red.png" border=0 ID="img9" width="25" height="25" onMouseover = "alert(myDescription[9])"></th>
+    <th><img name=img10 src="blue.png" border=0 ID="img10" width="25" height="25"onMouseover = alert(myDescription[10])></th>
+    <th><img name=img11 src="red.png" border=0 ID="img11" width="25" height="25" onMouseover = alert(myDescription[11])></th>
          </tr>   
          <tr>
-    <th><img name=img12 src="blue.png" border=0 ID="img12" width="50" height="50" onMouseover = "alert(myDescription[12])"></th>
-    <th><img name=img13 src="blue.png" border=0 ID="img13" width="50" height="50" onMouseover = alert(myDescription[13])></th>
-    <th><img name=img14 src="white.png" border=0 ID="img14" width="50" height="50" onMouseover = alert(myDescription[14])></th>
+    <th><img name=img12 src="blue.png" border=0 ID="img12" width="25" height="25" onMouseover = "alert(myDescription[12])"></th>
+    <th><img name=img13 src="white.png" border=0 ID="img13" width="25" height="25" width="25" height="25" onMouseover = alert(myDescription[13])></th>
+    <th><img name=img14 src="white.png" border=0 ID="img14" width="25" height="25" onMouseover = alert(myDescription[14])></th>
         </tr>
         <tr>
-    <th><img name=img15 src="white.png" border=0 ID="img15" width="50" height="50" onMouseover = "alert(myDescription[15])"></th>
-    <th><img name=img16 src="white.png" border=0 ID="img16" width="50" height="50" onMouseover = alert(myDescription[16])></th>
-    <th><img name=img17 src="white.png" border=0 ID="img17" width="50" height="50" onMouseover = alert(myDescription[17])></th>
-         </tr>
-        <tr>
-    <th><img name=img18 src="white.png" border=0 ID="img18" width="50" height="50" onMouseover = "alert(myDescription[18])"></th>
-    <th><img name=img19 src="blue.png" border=0 ID="img19" width="50" height="50" onMouseover = alert(myDescription[19])></th>
-    <th><img name=img20 src="blue.png" border=0 ID="img20" width="50" height="50" onMouseover = alert(myDescription[20])></th>
+    <th><img name=img15 src="white.png" border=0 ID="img15" width="25" height="25" width="25" height="25" onMouseover = "alert(myDescription[15])"></th>
+    <th><img name=img16 src="white.png" border=0 ID="img16" width="25" height="25" onMouseover = alert(myDescription[16])></th>
+    <th><img name=img17 src="white.png" border=0 ID="img17" width="25" height="25" onMouseover = alert(myDescription[17])></th>
+         </tr></table>
+       <table> <tr> ECONOMY CLASS
+    <th><img name=img18 src="white.png" border=0 ID="img18" width="25" height="25" onMouseover = "alert(myDescription[18])"></th>
+    <th><img name=img19 src="blue.png" border=0 ID="img19" width="25" height="25" onMouseover = alert(myDescription[19])></th>
+    <th><img name=img20 src="blue.png" border=0 ID="img20" width="25" height="25" onMouseover = alert(myDescription[20])></th>
          </tr>
          <tr>
-    <th><img name=img21 src="white.png" border=0 ID="img21" width="50" height="50" onMouseover = "alert(myDescription[21])"></th>
-    <th><img name=img22 src="white.png" border=0 ID="img22" width="50" height="50" onMouseover = alert(myDescription[22])></th>
-    <th><img name=img23 src="white.png" border=0 ID="img23" width="50" height="50" onMouseover = alert(myDescription[23])></th>
+    <th><img name=img21 src="white.png" border=0 ID="img21" width="25" height="25" onMouseover = "alert(myDescription[21])"></th>
+    <th><img name=img22 src="white.png" border=0 ID="img22" width="25" height="25" onMouseover = alert(myDescription[22])></th>
+    <th><img name=img23 src="white.png" border=0 ID="img23" width="25" height="25" onMouseover = alert(myDescription[23])></th>
+           </tr>
+        <tr>
+    <th><img name=img24 src="blue.png" border=0 ID="img24" width="25" height="25" onMouseover = alert(myDescription[24])></th>
+    <th><img name=img25 src="blue.png" border=0 ID="img25" width="25" height="25" onMouseover = alert(myDescription[25])></th>
+    <th><img name=img26 src="white.png" border=0 ID="img26" width="25" height="25" onMouseover = "alert(myDescription[26])"></th>
          </tr>
+         <tr>
+    <th><img name=img27 src="red.png" border=0 ID="img27" width="25" height="25" onMouseover = "alert(myDescription[27])"></th>
+    <th><img name=img28 src="white.png" border=0 ID="img28" width="25" height="25" onMouseover = alert(myDescription[28])></th>
+    <th><img name=img29 src="red.png" border=0 ID="img29" width="25" height="25" onMouseover = alert(myDescription[29])></th>
+           </tr>
+         <tr>
+    <th><img name=img30 src="white.png" border=0 ID="img30" width="25" height="25" onMouseover = "alert(myDescription[30])"></th>
+    <th><img name=img31 src="white.png" border=0 ID="img31" width="25" height="25" onMouseover = alert(myDescription[31])></th>
+    <th><img name=img32 src="white.png" border=0 ID="img32" width="25" height="25" onMouseover = alert(myDescription[32])></th>
+           </tr>
      </table>
      <br>
+    
+     <!-- add the three different images so a key can be made so the user will know what color means what_-->
+     
 <image src = "white.png" border=1 width="10" height="10"> Available</image><br>
 <image src = "blue.png" border=1 width="10" height="10"> Not Available</image><br>
 <image src = "red.png" border=1 width="10" height="10"> Exit Seats</image><br>
