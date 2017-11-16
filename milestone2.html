@@ -1,0 +1,42 @@
+<html>
+    
+<head>
+    </head>
+    
+<body>
+    </body>
+    
+<form action="">
+    
+<div>
+Question 1 - Which continent is the biggest?<br>
+  <input type="radio" id="cont0" name="cont" value="Asia">Asia<br>
+  <input type="radio" id="cont1" name="cont" value="Europe">Europe<br>
+  <input type="radio" id="cont2" name="cont" value="Australia">Australia<br>
+  <input type="radio" id="cont3" name="cont" value="Africa">Africa<br>
+ </div>
+   <input type="Submit" value="Check" onclick="myAnswer();" >
+</form>
+    
+   <script language="javascript">
+//calling a function when check is clicked on
+function myAnswer(){
+//adding a variable for the answer
+var answer;
+//using a for loop to see if the answer is checked and the value of it
+    
+    for (i=0; i<4; i++){
+        
+    if (document.getElementById("cont" + i).checked)
+        answer=document.getElementById("cont"+i).value;
+        }
+//if the answer is correct say good           
+    if (answer == "Asia")
+       {document.write("Good Job");} 
+//if incorrect say try again         
+    else {document.write("Refresh and Try Again");}
+        }
+    </script>
+
+    
+</html>
