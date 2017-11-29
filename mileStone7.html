@@ -1,0 +1,257 @@
+<html>
+<head>
+    <!-- heading with the instructions-->
+    
+   <h1><center>Geography Quiz</center></h1>
+    <h2>Welcome to my Trivia Quiz.</h2> <strong>Instructions: </strong>If you want to add a timer on your quiz, you can do that by clicking on the timer button and then immediately on the number of questions you want to answer. (timer starts as soon as you click it)
+        <br>
+    You get 30 seconds to answer 3 questions. 
+        <br>
+    You get 1 minute to answer 5 questions.
+    <br>
+    <br>
+    If you wish to take the quiz without the timer, then just click on how many questions you want to answer.
+    <br>
+        Good Luck!
+    <br>
+    <br>
+    
+    <!--adding four buttons. one to hold show the number of questions and one to show the 30 second timer and the 1 minute timer-->
+    
+    <button onclick = "setTimeout(myAnswer2, 30000)">30 Sec Timer</button> -
+    <input type="button" id="sq" name="startQuiz" value="3 Questions" onClick="showQuestions(2)"/>
+    <br>
+    <br>
+    <button onclick = "setTimeout(myAnswer, 60000)"> 1 Min Timer</button> -
+    <input type="button" id="sq" name="startQuiz" value="5 Questions" onClick="showQuestions(1)"/>
+    <br>
+    <br>
+    </head>
+    <body>
+        
+    <!-- this is form 2. it will hold 3 questions so that when the 3 question button is click these will be the ones displayed-->
+
+    <form id= "form2" style="display: none;">
+    Question 1 - Which of these continents is the biggest?<br>
+    <input type="radio" id="cont0" name="cont" value="Asia"/>Asia<br>
+    <input type="radio" id="cont1" name="cont" value="Europe"/>Europe<br>
+    <input type="radio" id="cont2" name="cont" value="Australia"/>Australia<br>
+    <input type="radio" id="cont3" name="cont" value="Africa"/>Africa<br>
+        <hr>
+    Question 2 - What is the capital of England?<br>
+    <input type="radio" id="city0" name="city" value="Liverpool"/>Liverpool<br>
+    <input type="radio" id="city1" name="city" value="Manchester"/>Manchester<br>
+    <input type="radio" id="city2" name="city" value="London"/>London<br>
+    <input type="radio" id="city3" name="city" value="Oxford"/>Oxford<br>
+        <hr>
+    Question 3 - What is the longest river in the world?<br>
+    <input type="radio" id="river0" name="river" value="Nile River"/>Nile River<br>
+    <input type="radio" id="river1" name="river" value="Amazon River"/>Amazon River<br>
+    <input type="radio" id="river2" name="river" value="Congo River"/>Congo River<br>
+    <input type="radio" id="river3" name="river" value="Yellow River"/>Yellow River<br>
+        <hr>   
+        <br>
+    <input type="Submit" value="Submit Test" onclick="myAnswer2();"/>
+        <br>      
+        </form>
+        
+    <!-- this is form 1. it holds 5 questions. this is what will be displayed when the 5 question button is choosen.-->      
+<form id= "form1" style="display: none;">
+   
+    Question 1 - Which of these continents is the biggest?<br>
+    <input type="radio" id="cont0" name="cont" value="Asia"/>Asia<br>
+    <input type="radio" id="cont1" name="cont" value="Europe"/>Europe<br>
+    <input type="radio" id="cont2" name="cont" value="Australia"/>Australia<br>
+    <input type="radio" id="cont3" name="cont" value="Africa"/>Africa<br>
+        <hr>
+    Question 2 - What is the capital of England?<br>
+    <input type="radio" id="city0" name="city" value="Liverpool"/>Liverpool<br>
+    <input type="radio" id="city1" name="city" value="Manchester"/>Manchester<br>
+    <input type="radio" id="city2" name="city" value="London"/>London<br>
+    <input type="radio" id="city3" name="city" value="Oxford"/>Oxford<br>
+        <hr>
+    Question 3 - What is the longest river in the world?<br>
+    <input type="radio" id="river0" name="river" value="Nile River"/>Nile River<br>
+    <input type="radio" id="river1" name="river" value="Amazon River"/>Amazon River<br>
+    <input type="radio" id="river2" name="river" value="Congo River"/>Congo River<br>
+    <input type="radio" id="river3" name="river" value="Yellow River"/>Yellow River<br>
+        <hr>    
+    
+    <!-- adding questions with a input text box so the user can write in their answers--> 
+    
+    Question 4 - What ocean is Hawaii in?<br>
+    <input type = "text" id = "q4" name = "q4" maxlength="30"size="30"/><br>
+        <hr>
+    Question 5 - What continent is Morroco in?<br>
+    <input type = "text" id = "q5" name = "q5" maxlength="30"size="30"/>
+        <br>
+        <br>
+    <input type="Submit" value="Submit Test" onclick="myAnswer();"/>
+        <br>
+    </form>
+        
+    
+   <script language="javascript">
+       
+    // calling a function that when 3 question button will show form 2. and when 5 question button is clicked form 1 will show.   
+       
+       function showQuestions(a){
+           if(a==1)
+           document.getElementById("form1").style.display="block";
+           else
+           document.getElementById("form2").style.display="block";
+
+       }
+       
+       
+
+//call a function when check is clicked on FIVE QUESTIONS
+       
+       function myAnswer(){
+    
+//defining variables to check the answers using loops.and to display the correct results.
+    
+        var totalQuestions = 5;
+        var correctAnswers = 0;
+        var i;
+
+//loop through each question to find the right answer; then if correct add it to the number of correct answers variable
+
+    
+    var a1 = document.getElementsByName('cont'); 
+    for (i = 0; i < a1.length; i++)
+    {   
+        if (a1[i].checked)
+            {if(a1[i].value == 'Asia')
+                {correctAnswers++;
+                 }
+            }
+    }
+    var a2 = document.getElementsByName('city'); 
+    for (i = 0; i < a2.length; i++)
+    {   
+        if (a2[i].checked)
+            {if(a2[i].value == 'London')
+                {correctAnswers++;
+                 }
+            }
+    }  
+    var a3 = document.getElementsByName('river'); 
+    for (i = 0; i < a3.length; i++)
+    {   
+        if (a3[i].checked)
+            {if(a3[i].value == 'Nile River')
+                {correctAnswers++;
+                 }
+            }
+    }
+    var a4 = document.getElementById('q4').value.toLowerCase();
+        if (a4=='pacific'){
+        correctAnswers++;
+        }
+        else if(a4=='pacific ocean'){
+        correctAnswers++;
+        }
+    var a5 = document.getElementById('q5').value.toUpperCase();
+        if (a5=='AFRICA'){
+        correctAnswers++;
+        }
+
+// Displaying results FOR FIVE QUESTIONS - If the number of correct answers matches the number of total questions then the score is 100 percent. If not show how many they got right. - alert the user.
+
+        var alertText;
+
+        if(correctAnswers == totalQuestions)
+        {alertText = "Well Done! You got all the questions right!";
+        }
+            else
+            {alertText = "You got " + correctAnswers + " out of " + totalQuestions + " correct!";
+            }
+                alert(alertText);
+       }
+       
+       
+
+//call a function when check is clicked on THEE QUESTIONS
+       
+       function myAnswer2(){
+    
+//defining variables to check the answers using loops.and to display the correct results.
+    
+        var totalQuestions = 3;
+        var correctAnswers = 0;
+        var i;
+
+//loop through each question to find the right answer; then if correct add it to the number of correct answers variable
+
+    
+    var q1 = document.getElementsByName('cont'); 
+    for (i = 0; i < q1.length; i++)
+    {   
+        if (q1[i].checked)
+            {if(q1[i].value == 'Asia')
+                {correctAnswers++;
+                 }
+            }
+    }
+    var q2 = document.getElementsByName('city'); 
+    for (i = 0; i < q2.length; i++)
+    {   
+        if (q2[i].checked)
+            {if(q2[i].value == 'London')
+                {correctAnswers++;
+                 }
+            }
+    }  
+    var q3 = document.getElementsByName('river'); 
+    for (i = 0; i < q3.length; i++)
+    {   
+        if (q3[i].checked)
+            {if(q3[i].value == 'Nile River')
+                {correctAnswers++;
+                 }
+            }
+    }
+
+// Displaying results FOR THREE QUESTIONS - If the number of correct answers matches the number of total questions then the score is 100 percent. If not show how many they got right. - alert the user.
+
+        var alertText;
+
+        if(correctAnswers == totalQuestions)
+        {alertText = "Well Done! You got all the questions right!";
+        }
+            else
+            {alertText = "You got " + correctAnswers + " out of " + totalQuestions + " correct!";
+            }
+                alert(alertText);
+}
+
+		//Storing information in COOKIES
+		//function used to create a cookie
+		//function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
+       
+       function setCookie(cookieName, cookieValue, cookiePath, cookieExpires)
+		{
+			cookieValue = escape(cookieValue);
+			if(cookieExpires == " ")
+				{
+					var nowDate = new Date();
+					nowDate.setMonth(nowDate.getMonth() + 6);
+					cookieExpires = nowDate.toGMTString();
+				}
+			if (cookiePath != " ")
+				{
+					cookiePath = ";Path=" + cookiePath;
+				}
+			document.cookie = cookieName + "=" + cookieValue + 
+				";expires=" + cookieExpires + cookiePath;
+		}
+		setCookie("attempt1", "", "", "");
+		setCookie("attempt2", "", "", "");
+		setCookie("attempt3", "", "", "");
+	
+    
+    </script>
+    
+    </body>
+</html>
