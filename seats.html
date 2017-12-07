@@ -1,0 +1,341 @@
+<html>
+
+<head>
+<h1>Airline Seats</h1> <br>
+
+<script language="javascript">
+    
+    //need to put my descriptions in arrays of the airplane information like seat location, class, price, emergency, and bulk
+    
+    var myDescription = new Array();
+    
+        myDescription[0] = new Array();
+        myDescription[0][0] = "Price:250";
+        myDescription[0][1] = "First Class";
+        myDescription[0][2] = "Bulk Head";
+        myDescription[0][3] = "A1";
+    
+        myDescription[1] = new Array();
+        myDescription[1][0] = "Price:250";
+        myDescription[1][1] = "First Class";
+        myDescription[1][2] = "Bulk Head & Middle Seat";
+        myDescription[1][3] = "B1";
+    
+        myDescription[2] = new Array();
+        myDescription[2][0] = "Price:260";
+        myDescription[2][1] = "First Class";
+        myDescription[2][2] = "Bulk Head";
+        myDescription[2][3] = "C1";
+    
+        myDescription[3] = new Array();
+        myDescription[3][0] = "Price:248";
+        myDescription[3][1] = "First Class";
+        myDescription[3][2] = "Window Seat";
+        myDescription[3][3] = "A2";
+    
+        myDescription[4] = new Array();
+        myDescription[4][0] = "Not Available";
+    
+        myDescription[5] = new Array();
+        myDescription[5][0] = "Price:260";
+        myDescription[5][1] = "First Class";
+        myDescription[5][2] = "Window Seat";
+        myDescription[5][3] = "C2";
+    
+        myDescription[6] = new Array();
+        myDescription[6][0] = "Not Available";
+    
+        myDescription[7] = new Array();
+        myDescription[7][0] = "Price:160";
+        myDescription[7][1] = "Business Class";
+        myDescription[7][2] = "Bulk Head & Middle Seat";
+        myDescription[7][3] = "B3";
+    
+        myDescription[8] = new Array();
+        myDescription[8][0] = "Not Available";
+    
+        myDescription[9] = new Array();
+        myDescription[9][0] = "Price:143";
+        myDescription[9][1] = "Business Class";
+        myDescription[9][2] = "Emergency Exit";
+        myDescription[9][3] = "A4";
+    
+        myDescription[10] = new Array();
+        myDescription[10][0] = "Not Available";
+    
+        myDescription[11] = new Array();
+        myDescription[11][0] = "Price:142";
+        myDescription[11][1] = "Business Class";
+        myDescription[11][2] = "Emergency Exit";
+        myDescription[11][3] = "C4";
+         
+        myDescription[12] = new Array();
+        myDescription[12][0] = "Not Available";
+    
+        myDescription[13] = new Array();
+        myDescription[13][0] = "Price:132";
+        myDescription[13][1] = "Business Class";
+        myDescription[13][2] = "Middle Seat";
+        myDescription[13][3] = "B5";
+    
+        myDescription[14] = new Array();
+        myDescription[14][0] = "Price:146";
+        myDescription[14][1] = "Business Class";
+        myDescription[14][2] = "Window Seat";
+        myDescription[14][3] = "C5";
+    
+        myDescription[15] = new Array();
+        myDescription[15][0] = "Price:143";
+        myDescription[15][1] = "Business Class";
+        myDescription[15][2] = "Window Seat";
+        myDescription[15][3] = "A6";
+    
+        myDescription[16] = new Array();
+        myDescription[16][0] = "Price:130";
+        myDescription[16][1] = "Business Class";
+        myDescription[16][2] = "Middle Seat";
+        myDescription[16][3] = "B6";
+    
+        myDescription[17] = new Array();
+        myDescription[17][0] = "Price:137";
+        myDescription[17][1] = "Business Class";
+        myDescription[17][2] = "Window Seat";
+        myDescription[17][3] = "C6";
+
+        myDescription[18] = new Array();
+        myDescription[18][0] = "Price:85";
+        myDescription[18][1] = "Economy Class";
+        myDescription[18][2] = "Bulk Head";
+        myDescription[18][3] = "A7";
+    
+        myDescription[19] = new Array();
+        myDescription[19][0] = "Not Available";
+    
+        myDescription[20] = new Array();
+        myDescription[20][0] = "Not Available";
+    
+        myDescription[21] = new Array();
+        myDescription[21][0] = "Price:78";
+        myDescription[21][1] = "Economy Class";
+        myDescription[21][2] = "Window Seat";
+        myDescription[21][3] = "A8";
+    
+        myDescription[22] = new Array();
+        myDescription[22][0] = "Price:93";
+        myDescription[22][1] = "Economy Class";
+        myDescription[22][2] = "Middle Seat";
+        myDescription[22][3] = "B8";
+    
+        myDescription[23] = new Array();
+        myDescription[23][0] = "Price:82";
+        myDescription[23][1] = "Economy Class";
+        myDescription[23][2] = "Window Seat";
+        myDescription[23][3] = "C8";
+
+        myDescription[24] = new Array();
+        myDescription[24][0] = "Not Available";
+
+        myDescription[25] = new Array();
+        myDescription[25][0] = "Not Available";
+    
+        myDescription[26] = new Array();
+        myDescription[26][0] = "Price:78";
+        myDescription[26][1] = "Economy Class";
+        myDescription[26][2] = "Window Seat";
+        myDescription[26][3] = "C9";
+    
+        myDescription[27] = new Array();
+        myDescription[27][0] = "Price:82";
+        myDescription[27][1] = "Economy Class";
+        myDescription[27][2] = "Emergency Exit";
+        myDescription[27][3] = "A10";
+
+        myDescription[28] = new Array();
+        myDescription[28][0] = "Price:72";
+        myDescription[28][1] = "Economy Class";
+        myDescription[28][2] = "Middle Seat";
+        myDescription[28][3] = "B10";
+    
+        myDescription[29] = new Array();
+        myDescription[29][0] = "Price:75";
+        myDescription[29][1] = "Economy Class";
+        myDescription[29][2] = "Emergency Exit";
+        myDescription[29][3] = "C10";
+    
+        myDescription[30] = new Array();
+        myDescription[30][0] = "Price:59";
+        myDescription[30][1] = "Economy Class";
+        myDescription[30][2] = "Window Seat";
+        myDescription[30][3] = "A11";
+        
+        myDescription[31] = new Array();
+        myDescription[31][0] = "Price:63";
+        myDescription[31][1] = "Economy Class";
+        myDescription[31][2] = "Middle Seat";
+        myDescription[31][3] = "B11";
+    
+        myDescription[32] = new Array();
+        myDescription[32][0] = "Price:90";
+        myDescription[32][1] = "Economy Class";
+        myDescription[32][2] = "Window Seat";
+        myDescription[32][3] = "C11";
+    
+    //add a function that will take you to open the next frame where the user can input their information
+    
+       function buyTicket(){
+           document.getElementById("airplane").style.display = "none";           
+        var str = '<form>';
+        str += 'First Name:<br>';
+        str += '<input type="text" name="firstname">';
+        str += '<br>';
+        str += 'Last Name:<br>';
+        str += '<input type="text" name="lastname">';
+        str += '<br>';
+        str += 'Email Address:<br>';
+        str += '<input type="text" name="emailAddress">';
+        str += '<br>';
+        str += 'Street Address:<br>';
+        str += '<input type="text" name="streetAddress">';
+        str += '<br>';
+        str += 'City:<br>';
+        str += '<input type="text" name="city">';
+        str += '<br>';  
+        str += 'State:<br>';
+        str += '<input type="text" name="state">';
+        str += '<br>';
+        str += 'Zip Code:<br>';
+        str += '<input type="text" name="zipCode">';
+        str += '<br>';
+        str += 'Credit Card Number:<br>';
+        str += '<input type="text" name="cardNumber">';
+        str += '<br>';
+        str += 'Security Code on Card:<br>';
+        str += '<input type="text" name="secuirty">';
+        str += '<br>';
+        str += 'Expiration(MM/YY):<br>';
+        str += '<input type="text" name="expiration">';
+        str += '<br><br>';
+        str += '<input type="submit" value="Buy">';
+        str += '</form>';
+       
+       document.getElementById("info").innerHTML = str;
+       return false
+           
+   } 
+           function seatAlert(info){
+               document.getElementById("ID").innerHTML = info;
+           }
+    
+  
+    </script> 
+    
+</head>
+
+    <!--include all the images of the airpane seats On a table that holds all of them with a onMouseOver function that shows the descriptions from the descriptions array.-->  
+    
+    <!-- add an onClick Function that will take you to a new frame where the user can buy a ticket and put in their information-->
+    
+    
+    
+ <body>
+     
+     <p ID = "ID">
+     
+     </p>
+     
+     <div id = "airplane" style = "display: block">
+     
+    <style>
+     table, th, td
+        
+     </style>
+     <table> 
+          <tr><th colspan = "4">FIRST CLASS</th></tr>
+         <tr>
+    <th><img name=img0 src="white.png" border=1 ID="img0" width="25" height="25" onMouseover = "seatAlert(myDescription[0])" onclick = "return buyTicket()"></th>
+    <th><img name=img1 src="white.png" border=1 ID="img1" width="25" height="25" onMouseover = "seatAlert(myDescription[1])" onclick = "return buyTicket()"></th>
+             <th></th>
+    <th><img name=img2 src="white.png" border=1 ID="img2" width="25" height="25" onMouseover = "seatAlert(myDescription[2])" onclick = "return buyTicket()"></th>
+         </tr>
+         <tr>
+    <th><img name=img3 src="white.png" border=1 ID="img3" width="25" height="25" onMouseover = "seatAlert(myDescription[3])" onclick = "return buyTicket()"></th>
+    <th><img name=img4 src="blue.png" border=1 ID="img4" width="25" height="25" onMouseover = "seatAlert(myDescription[4])"></th>
+             <th> </th>
+    <th><img name=img5 src="white.png" border=1 ID="img5" width="25" height="25" onMouseover = "seatAlert(myDescription[5])" onclick = "return buyTicket()"></th>
+         </tr>
+         <tr><th colspan = "4">BUSINESS CLASS</th></tr>
+         <tr> 
+    <th><img name=img6 src="blue.png" border=1 ID="img6" width="25" height="25" onMouseover = "seatAlert(myDescription[6])" onclick = "return buyTicket()"></th>
+    <th><img name=img7 src="white.png" border=1 ID="img7" width="25" height="25" onMouseover = "seatAlert(myDescription[7])" onclick = "return buyTicket()"></th>
+            <th></th>
+    <th><img name=img8 src="blue.png" border=1 ID="img8" width="25" height="25" onMouseover = "seatAlert(myDescription[8])"></th>
+         </tr> 
+                <tr> 
+    <th><img name=img9 src="red.png" border=1 ID="img9" width="25" height="25" onMouseover = "seatAlert(myDescription[9])" onclick = "return buyTicket()"></th>
+    <th><img name=img10 src="blue.png" border=1 ID="img10" width="25" height="25"onMouseover = "seatAlert(myDescription[10])"></th>
+                    <th>  </th>
+    <th><img name=img11 src="red.png" border=1 ID="img11" width="25" height="25" onMouseover = "seatAlert(myDescription[11])" onclick = "return buyTicket()"></th>
+         </tr>   
+         <tr>
+    <th><img name=img12 src="blue.png" border=1 ID="img12" width="25" height="25" onMouseover = "seatAlert(myDescription[12])"></th>
+    <th><img name=img13 src="white.png" border=1 ID="img13" width="25" height="25" onMouseover = "seatAlert(myDescription[13])" onclick = "return buyTicket()"></th>
+              <th></th>
+    <th><img name=img14 src="white.png" border=1 ID="img14" width="25" height="25" onMouseover = "seatAlert(myDescription[14])" onclick = "return buyTicket()"></th>
+        </tr>
+        <tr>
+    <th><img name=img15 src="white.png" border=1 ID="img15" width="25" height="25" onMouseover = "seatAlert(myDescription[15])" onclick = "return buyTicket()"></th>
+    <th><img name=img16 src="white.png" border=1 ID="img16" width="25" height="25" onMouseover = "seatAlert(myDescription[16])" onclick = "return buyTicket()"></th>
+            <th></th>
+    <th><img name=img17 src="white.png" border=1 ID="img17" width="25" height="25" onMouseover = "seatAlert(myDescription[17])" onclick = "return buyTicket()"></th>
+         </tr>
+          <tr><th colspan = "4">ECONOMY CLASS</th></tr>
+         <tr>
+    <th><img name=img18 src="white.png" border=1 ID="img18" width="25" height="25" onMouseover = "seatAlert(myDescription[18])" onclick = "return buyTicket()"></th>
+    <th><img name=img19 src="blue.png" border=1 ID="img19" width="25" height="25" onMouseover = "seatAlert(myDescription[19])"></th>
+             <th></th>
+    <th><img name=img20 src="blue.png" border=1 ID="img20" width="25" height="25" onMouseover = seatAlert(myDescription[20])></th>
+         </tr>
+         <tr>
+    <th><img name=img21 src="white.png" border=1 ID="img21" width="25" height="25" onMouseover = "seatAlert(myDescription[21])" onclick = "return buyTicket()"></th>
+    <th><img name=img22 src="white.png" border=1 ID="img22" width="25" height="25" onMouseover = "seatAlert(myDescription[22])" onclick = "return buyTicket()"></th>
+             <th></th>
+    <th><img name=img23 src="white.png" border=1 ID="img23" width="25" height="25" onMouseover = "seatAlert(myDescription[23])" onclick = "return buyTicket()"></th>
+           </tr>
+        <tr>
+    <th><img name=img24 src="blue.png" border=1 ID="img24" width="25" height="25" onMouseover = seatAlert(myDescription[24])></th>
+    <th><img name=img25 src="blue.png" border=1 ID="img25" width="25" height="25" onMouseover = seatAlert(myDescription[25])></th>
+            <th></th>
+    <th><img name=img26 src="white.png" border=1 ID="img26" width="25" height="25" onMouseover = "seatAlert(myDescription[26])" onclick = "return buyTicket()"></th>
+         </tr>
+         <tr>
+    <th><img name=img27 src="red.png" border=1 ID="img27" width="25" height="25" onMouseover = "seatAlert(myDescription[27])" onclick = "return buyTicket()"></th>
+    <th><img name=img28 src="white.png" border=1 ID="img28" width="25" height="25" onMouseover = "seatAlert(myDescription[28])" onclick = "return buyTicket()"></th>
+             <th></th>
+    <th><img name=img29 src="red.png" border=1 ID="img29" width="25" height="25" onMouseover = "seatAlert(myDescription[29])" onclick = "return buyTicket()"></th>
+           </tr>
+         <tr>
+    <th><img name=img30 src="white.png" border=1 ID="img30" width="25" height="25" onMouseover = "seatAlert(myDescription[30])" onclick = "return buyTicket()"></th>
+    <th><img name=img31 src="white.png" border=1 ID="img31" width="25" height="25" onMouseover = "seatAlert(myDescription[31])" onclick = "return buyTicket()"></th>
+    
+    <th><img name=nothing src="white.png" border=0 ID="none" width="10"></th>
+    <th><img name=img32 src="white.png" border=1 ID="img32" width="25" height="25" onMouseover = "seatAlert(myDescription[32])" onclick = "return buyTicket()"></th>
+           </tr>
+     </table>
+    <br>
+     <!-- add the three different images so a key can be made so the user will know what color means what_-->
+     
+<image src = "white.png" border=1 width="10" height="10"> Available</image><br>
+<image src = "blue.png" border=1 width="10" height="10"> Not Available</image><br>
+<image src = "red.png" border=1 width="10" height="10"> Exit Seats</image><br>
+     
+     </div>
+
+     <br>
+    <br>
+     
+    <div id="info" style = "display: block">
+    </div>
+     
+</body>
+
+</html>
