@@ -1,7 +1,8 @@
 <html>
 
 <head>
-<h1>Airline Seats</h1> <br>
+<h1><center>Ukrainian AirLids</center></h1>
+    <h2>BNA to PHL on Jan 18th 2018 at 3:05pm</h2>
 
 <script language="javascript">
     
@@ -180,16 +181,18 @@
         myDescription[32][2] = "Window Seat";
         myDescription[32][3] = "C11";
     
+    var help;
+    
     //add a function that will take you to open the next frame where the user can input their information
     
        function buyTicket(){
            document.getElementById("airplane").style.display = "none";           
         var str = '<form>';
         str += 'First Name:<br>';
-        str += '<input type="text" name="firstname">';
+        str += '<input type="text" id = "firstname" name="firstname">';
         str += '<br>';
         str += 'Last Name:<br>';
-        str += '<input type="text" name="lastname">';
+        str += '<input type="text" id = "lastname" name="lastname">';
         str += '<br>';
         str += 'Email Address:<br>';
         str += '<input type="text" name="emailAddress">';
@@ -215,26 +218,38 @@
         str += 'Expiration(MM/YY):<br>';
         str += '<input type="text" name="expiration">';
         str += '<br><br>';
-        str += '<button type="submit" value="Buy" onlick = "confirm()">Buy Ticket</button>';
+        str += '<button type="submit" value="Buy" onclick = "return confirm()">Buy Ticket</button>';
         str += '</form>';
        
        document.getElementById("info").innerHTML = str;
-       return false
+       return
            
    } 
            function seatAlert(a,b,c,d){
-               var help;
                if (a == "Not Available"){
                    help = a;
                }
                else{
-                    help = a+"<br>"+b+"<br>"+c+"<br>"+d;
+                    var notHelp = a+"<br>";
+                    help = b+"<br>"+c+"<br>"+d;
                    
                }
-                    document.getElementById("ID").innerHTML = help;
+                    document.getElementById("ID").innerHTML = notHelp + help;
            }
     function confirm(){
         
+        document.getElementById("info").style.display = "none"; 
+        
+     var name = new Array();
+        name[0] = document.getElementById('firstname').value
+        name[1] = document.getElementById('lastname').value
+        document.write("BNA to PHL<br>");
+        document.write("Jan 18th 2018 <br>");
+        document.write("Time: 3:05pm <br><br>")
+        document.write(name[0] + "<br>" + name[1] + "<br>");
+        document.write(help);
+        document.write("<br><br><br><button onclick='window.print()'>Print Ticket</button>");
+        return;      
     }
   
     </script> 
