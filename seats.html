@@ -2,7 +2,7 @@
 
 <head>
 <h1><center>Ukrainian AirLids</center></h1>
-    <h2>BNA to PHL on Jan 18th 2018 at 3:05pm</h2>
+    <h2><center>BNA to PHL on Jan 18th 2018 at 3:05pm</center></h2>
 
 <script language="javascript">
     
@@ -228,25 +228,25 @@
            function seatAlert(a,b,c,d){
                if (a == "Not Available"){
                    help = a;
+                   document.getElementById("ID").innerHTML = help;
                }
                else{
                     var notHelp = a+"<br>";
-                    help = b+"<br>"+c+"<br>"+d;
-                   
+                    help = d+"<br>"+b+"<br>"+c;
+                   document.getElementById("ID").innerHTML = notHelp + help;
                }
-                    document.getElementById("ID").innerHTML = notHelp + help;
            }
     function confirm(){
-        
-        document.getElementById("info").style.display = "none"; 
         
      var name = new Array();
         name[0] = document.getElementById('firstname').value
         name[1] = document.getElementById('lastname').value
-        document.write("BNA to PHL<br>");
-        document.write("Jan 18th 2018 <br>");
-        document.write("Time: 3:05pm <br><br>")
-        document.write(name[0] + "<br>" + name[1] + "<br>");
+        document.write(name[0] + " " + name[1] + "<br><br>");
+        document.write("<b>BNA to PHL</b><br>");
+        document.write("Date: Jan 18th 2018 <br>");
+        document.write("Time: 3:05pm <br><br>");
+        document.write("<b>Gate Number:</b> B4 <br><br>");
+        document.write("<b>Seat Information:</b><br>");
         document.write(help);
         document.write("<br><br><br><button onclick='window.print()'>Print Ticket</button>");
         return;      
